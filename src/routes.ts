@@ -16,7 +16,7 @@ export async function routes(
     res.send({ ok: true });
   });
 
-  fastify.get("/create", async (req: FastifyRequest, res: FastifyReply) => {
+  fastify.post("/create", async (req: FastifyRequest, res: FastifyReply) => {
     return new CreateNutricionController().execute(req, res);
   });
 }
